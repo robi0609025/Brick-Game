@@ -1,9 +1,11 @@
-import "./styles.css";
+let canvas = document.getElementById("gameScreen");
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use Parcel to bundle this sandbox, you can find more info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+let ctx = canvas.getContext("2d");
+
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 600;
+
+ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+//console.log(ctx);
+
+//ctx.fillRect(10, 10, 100, 100);
