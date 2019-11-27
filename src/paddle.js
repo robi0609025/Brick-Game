@@ -34,4 +34,8 @@ export default class Paddle {
   moveRight() {
     this.speed = this.maxSpeed;
   }
+
+  stop() {
+    this.speed = 0;
+  }
 }
