@@ -14,9 +14,8 @@ ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 //ctx.fillRect(10, 10, 100, 100);
 
 let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-new InputHandler();
+new InputHandler(paddle);
 
-//paddle.draw(ctx);
 let lastTime = 0;
 function gameLoop(timestamp) {
   let deltaTime = timestamp - lastTime;
