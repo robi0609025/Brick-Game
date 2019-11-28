@@ -3,9 +3,16 @@ export default class Ball {
     this.img_ball = img_ball;
     this.width = 15;
     this.height = 15;
+    this.gameWidth = gameWidth;
+    this.gameHeight = gameHeight;
     this.position = {
-      x: gameWidth / 2,
-      y: gameHeight / 2
+      x: this.gameWidth / 2,
+      y: this.gameHeight / 2
+    };
+
+    this.speed = {
+      x: 2,
+      y: 2
     };
   }
 
@@ -19,5 +26,18 @@ export default class Ball {
     );
   }
 
-  update() {}
+  update(deltaTime) {
+    this.position.x += this.speed.x;
+    this.position.y += this.speed.y;
+
+    if (this.position.x > this.gameWidth || this.position.x < 0) {
+      this.position.x = this.position.x - this.speed.x;
+    }
+
+    if (this.position.y > this.gameHeight || this.position.y < 0) {
+      this.position.y = this.position.y - this.speed.y;
+    }
+
+    console.log(this.position.y);
+  }
 }
