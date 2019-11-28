@@ -30,12 +30,12 @@ export default class Ball {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
 
-    if (this.position.x > this.gameWidth || this.position.x < 0) {
-      this.position.x = this.position.x - this.speed.x;
+    if (this.position.x + this.width > this.gameWidth || this.position.x < 0) {
+      this.speed.x = -this.speed.x;
     }
 
-    if (this.position.y > this.gameHeight || this.position.y < 0) {
-      this.position.y = this.position.y - this.speed.y;
+    if (this.position.y + this.height > this.gameHeight || this.position.y < 0) {
+      this.speed.y = -this.speed.y;
     }
 
     console.log(this.position.y);
