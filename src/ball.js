@@ -1,6 +1,6 @@
 export default class Ball {
-  constructor(img_ball, gameWidth, gameHeight) {
-    this.img_ball = img_ball;
+  constructor(gameWidth, gameHeight) {
+    this.img_ball = document.getElementById("img_ball");
     this.width = 15;
     this.height = 15;
     this.gameWidth = gameWidth;
@@ -34,10 +34,11 @@ export default class Ball {
       this.speed.x = -this.speed.x;
     }
 
-    if (this.position.y + this.height > this.gameHeight || this.position.y < 0) {
+    if (
+      this.position.y + this.height > this.gameHeight ||
+      this.position.y < 0
+    ) {
       this.speed.y = -this.speed.y;
     }
-
-    console.log(this.position.y);
   }
 }
