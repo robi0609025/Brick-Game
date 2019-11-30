@@ -13,6 +13,7 @@ const GAME_HEIGHT = 600;
 //ctx.fillRect(10, 10, 100, 100);
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
+game.start();
 
 // game loop
 let lastTime = 0;

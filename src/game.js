@@ -9,8 +9,8 @@ export default class Game {
   }
 
   start() {
-    this.paddle = new Paddle(this.gameWidth, this.gameHeight);
-    this.ball = new Ball(this.gameWidth, this.gameHeight);
+    this.paddle = new Paddle(this);
+    this.ball = new Ball(this);
     new InputHandler(this.paddle);
   }
 
@@ -19,7 +19,7 @@ export default class Game {
     this.ball.draw(ctx);
   }
 
-  dpdate(deltaTime) {
+  update(deltaTime) {
     this.paddle.update(deltaTime);
     this.ball.update(deltaTime);
   }
